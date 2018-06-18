@@ -1,0 +1,14 @@
+TRACE: 2018/06/18 14:42:43 MTCBarrier.go:43: Enter function ParseEnvVars
+TRACE: 2018/06/18 14:42:43 MTCBarrier.go:197: Enter function Enter
+TRACE: 2018/06/18 14:42:43 MTCBarrier.go:204: Current CCP_NODES is 
+TRACE: 2018/06/18 14:42:43 MTCBarrier.go:212: New CCP_NODES is 1 10.0.0.4 1
+TRACE: 2018/06/18 14:42:43 MTCBarrier.go:102: Enter function InitMaster
+TRACE: 2018/06/18 14:42:43 Utils_linux.go:14: Enter function RunCommand
+TRACE: 2018/06/18 14:42:43 Utils_linux.go:25: command line: [/bin/sh -c /bin/bash -c 'set -e; set -o pipefail; export $(grep -v "^AZ_BATCH_" .shipyard.envlist | xargs); env | grep AZ_BATCH_ >> .shipyard.envlist; nvidia-docker run --shm-size=256m --name job-snake-task-00000 -v $AZ_BATCH_NODE_ROOT_DIR:$AZ_BATCH_NODE_ROOT_DIR -w $AZ_BATCH_TASK_WORKING_DIR -v $AZ_BATCH_NODE_ROOT_DIR/mounts/azfile-mesnardo2storage-myfileshare:/mnt/fileshare:rw -v /opt/intel:/opt/intel:ro --net=host --ulimit memlock=9223372036854775807 --device=/dev/infiniband/rdma_cm --device=/dev/infiniband/uverbs0 -v /etc/rdma:/etc/rdma:ro -v /etc/rdma/dat.conf:/etc/dat.conf:ro --env-file .shipyard.envlist -d mesnardo/petibm:0.3.1-GPU-IntelMPI-ubuntu']
+TRACE: 2018/06/18 14:42:54 Utils_linux.go:44: Extracted exit code 0
+TRACE: 2018/06/18 14:42:54 MTCBarrier.go:242: Enter function MasterBarrierEnter
+TRACE: 2018/06/18 14:42:54 Utils_linux.go:14: Enter function RunCommand
+TRACE: 2018/06/18 14:42:54 Utils_linux.go:25: command line: [/bin/sh -c /bin/bash -c 'set -e; set -o pipefail; export $(grep -v "^AZ_BATCH_" .shipyard.envlist | xargs); nvidia-docker exec  job-snake-task-00000 /mnt/fileshare/snake/run-petibm.sh /mnt/fileshare/snake; wait']
+TRACE: 2018/06/18 14:45:11 Utils_linux.go:44: Extracted exit code 0
+TRACE: 2018/06/18 14:45:11 MTCBarrier.go:271: Enter function MasterBarrierExit
+TRACE: 2018/06/18 14:45:11 MTCBarrier.go:223: Enter function Exit

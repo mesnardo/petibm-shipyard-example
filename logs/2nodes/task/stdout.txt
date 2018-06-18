@@ -1,0 +1,18 @@
+6082b043bcee8f1fc6a4e80b33552468346488a8624bc65717ad167936a617aa
+Number of nodes: 2
+Hosts: 10.0.0.4,10.0.0.5
+Number of processes per node to use: 2
+Total number of processes: 4
+Number of GPU devices available on each node: 4
+Number of GPU devices per node to use: 2 (0,1)
+PATH: /opt/intel/compilers_and_libraries_2016.3.223/linux/mpi/intel64/bin:/usr/local/nvidia/bin:/usr/local/cuda/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+LD_LIBRARY_PATH: /opt/intel/compilers_and_libraries_2016.3.223/linux/mpi/intel64/lib:/opt/intel/compilers_and_libraries_2016.3.223/linux/mpi/mic/lib:/usr/local/nvidia/lib:/usr/local/nvidia/lib64
+AMGX version 2.0.0.130-opensource
+Built on Jun 12 2018, 21:47:36
+Compiled with CUDA Runtime 8.0, using CUDA driver 9.0
+Cannot read file as JSON object, trying as AMGX config
+Cannot read file as JSON object, trying as AMGX config
+Converting config string to current config version
+Parsing configuration string: exception_handling=1 ; 
+Using Normal MPI (Hostbuffer) communicator...
+[time-step 0] Writing solution... 

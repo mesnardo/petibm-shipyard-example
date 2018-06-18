@@ -1,0 +1,182 @@
+dee0eb8b91e16e44dc3dc2a5158c4a347f3ecb0bad65b375fad944dda2f82e28
+Number of nodes: 1
+Hosts: 10.0.0.4
+Number of processes per node to use: 2
+Total number of processes: 2
+Number of GPU devices available on each node: 4
+Number of GPU devices per node to use: 2 (0,1)
+PATH: /opt/intel/compilers_and_libraries_2016.3.223/linux/mpi/intel64/bin:/usr/local/nvidia/bin:/usr/local/cuda/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+LD_LIBRARY_PATH: /opt/intel/compilers_and_libraries_2016.3.223/linux/mpi/intel64/lib:/opt/intel/compilers_and_libraries_2016.3.223/linux/mpi/mic/lib:/usr/local/nvidia/lib:/usr/local/nvidia/lib64
+AMGX version 2.0.0.130-opensource
+Built on Jun 12 2018, 21:47:36
+Compiled with CUDA Runtime 8.0, using CUDA driver 9.0
+Cannot read file as JSON object, trying as AMGX config
+Cannot read file as JSON object, trying as AMGX config
+Converting config string to current config version
+Parsing configuration string: exception_handling=1 ; 
+Using Normal MPI (Hostbuffer) communicator...
+[time-step 0] Writing solution... done
+[time-step 5] Writing solution... done
+[time-step 10] Writing solution... done
+[time-step 10] Writing necessary data for restarting... done
+Summary of Memory Usage in PETSc
+Maximum (over computational time) process memory:        total 7.6581e+09 max 3.8313e+09 min 3.8268e+09
+Current process memory:                                  total 4.8456e+09 max 2.4265e+09 min 2.4191e+09
+Maximum (over computational time) space PetscMalloc()ed: total 6.0629e+09 max 3.0322e+09 min 3.0307e+09
+Current space PetscMalloc()ed:                           total 9.9005e+05 max 4.9502e+05 min 4.9502e+05
+#PETSc Option Table entries:
+-directory /mnt/fileshare/snake
+-forces_ksp_type preonly
+-forces_pc_factor_mat_solver_package superlu_dist
+-forces_pc_type lu
+-log_view ascii:/mnt/fileshare/snake/log.out
+-malloc_log
+-memory_view
+-options_left
+-poisson_ksp_atol 1.0E-06
+-poisson_ksp_max_it 1000
+-poisson_ksp_rtol 0.0
+-poisson_ksp_type cg
+-poisson_mg_levels_ksp_type cg
+-poisson_pc_gamg_agg_nsmooths 1
+-poisson_pc_gamg_type agg
+-poisson_pc_type gamg
+-velocity_ksp_atol 1.0E-06
+-velocity_ksp_max_it 1000
+-velocity_ksp_rtol 0.0
+-velocity_ksp_type bcgs
+-velocity_pc_jacobi_type diagonal
+-velocity_pc_type jacobi
+#End of PETSc Option Table entries
+There are 8 unused database options. They are:
+Option left: name:-poisson_ksp_atol value: 1.0E-06
+Option left: name:-poisson_ksp_max_it value: 1000
+Option left: name:-poisson_ksp_rtol value: 0.0
+Option left: name:-poisson_ksp_type value: cg
+Option left: name:-poisson_mg_levels_ksp_type value: cg
+Option left: name:-poisson_pc_gamg_agg_nsmooths value: 1
+Option left: name:-poisson_pc_gamg_type value: agg
+Option left: name:-poisson_pc_type value: gamg
+[0] Maximum memory PetscMalloc()ed 3032181888 maximum size of entire process 3826786304
+[0] Memory usage sorted by function
+[0] 3 1920 AOCreate()
+[0] 12 139319280 AOCreate_Basic()
+[0] 3 144 DMCompositeAddDM()
+[0] 3 11652000 DMCompositeGetISLocalToGlobalMappings()
+[0] 12 27936 DMCreate()
+[0] 5 23222320 DMCreateMatrix_Composite_AIJ()
+[0] 12 46444864 DMCreateMatrix_DA_2d_MPIAIJ()
+[0] 2 96 DMCreate_Composite()
+[0] 4 2240 DMCreate_DA()
+[0] 3 17418288 DMDAGetNatural_Private()
+[0] 8 256 DMDAGetProcessorSubset()
+[0] 3 48 DMSetUp_Composite()
+[0] 8 144 DMSetUp_DA()
+[0] 2 1200 DMSetUp_DA_1D()
+[0] 18 34918800 DMSetUp_DA_2D()
+[0] 56 43008 ISCreate()
+[0] 7 112 ISCreate_Block()
+[0] 24 384 ISCreate_General()
+[0] 25 400 ISCreate_Stride()
+[0] 13 74352 ISGeneralSetIndices_General()
+[0] 16 23297520 ISGetIndices_Stride()
+[0] 1 11651984 ISLocalToGlobalMappingConcatenate()
+[0] 7 4592 ISLocalToGlobalMappingCreate()
+[0] 2 32 KSPConvergedDefaultCreate()
+[0] 2 2336 KSPCreate()
+[0] 1 16 KSPCreate_BCGS()
+[0] 2 160 KSPCreate_CG()
+[0] 35 290240 MatCheckCompressedRow()
+[0] 69 192096 MatCreate()
+[0] 6 104516352 MatCreateSeqAIJWithArrays()
+[0] 18 3456 MatCreate_MPIAIJ()
+[0] 47 18800 MatCreate_SeqAIJ()
+[0] 3 480 MatCreate_Shell()
+[0] 21 1218507264 MatDuplicateNoCreate_SeqAIJ()
+[0] 3 40896 MatDuplicate_MPIAIJ()
+[0] 31 174336 MatGetBrowsOfAoCols_MPIAIJ()
+[0] 1 416 MatGetFactor_aij_superlu_dist()
+[0] 2 4704 MatGetOrdering()
+[0] 1 2352 MatGetOrdering_Natural()
+[0] 6 624 MatGetRow_MPIAIJ()
+[0] 15 278778576 MatMPIAIJGetLocalMat()
+[0] 38 307717584 MatMarkDiagonal_SeqAIJ()
+[0] 20 185851200 MatMatMultSymbolic_MPIAIJ_MPIAIJ_nonscalable()
+[0] 6 192 MatRegisterBaseName()
+[0] 24 168377152 MatSeqAIJCheckInode()
+[0] 68 2345004192 MatSeqAIJSetPreallocation_SeqAIJ()
+[0] 17 72176 MatSetUpMultiply_MPIAIJ()
+[0] 586 44352016 MatSetValues_MPIAIJ()
+[0] 12 528 MatSolverPackageRegister()
+[0] 36 576 MatStashCreate_Private()
+[0] 112 90336 MatStashScatterBegin_Ref()
+[0] 1 48 MatStashScatterEnd_Ref()
+[0] 2 23259744 MatTranspose_MPIAIJ()
+[0] 2 5807248 MatZeroRowsColumns_MPIAIJ()
+[0] 1 5807232 MatZeroRowsColumns_SeqAIJ()
+[0] 2 1632 PCCreate()
+[0] 1 32 PCCreate_Jacobi()
+[0] 1 176 PCCreate_LU()
+[0] 4 726240 PetscBTCreate()
+[0] 22 35376 PetscClassPerfLogCreate()
+[0] 2 1616 PetscClassRegLogCreate()
+[0] 1 16 PetscCommBuildTwoSided_Ibarrier()
+[0] 8 128 PetscCommDuplicate()
+[0] 6 5376 PetscDSCreate()
+[0] 22 105776 PetscEventPerfLogCreate()
+[0] 22 633600 PetscEventPerfLogEnsureSize()
+[0] 2 1616 PetscEventRegLogCreate()
+[0] 2 9600 PetscEventRegLogRegister()
+[0] 8 185890096 PetscFreeSpaceGet()
+[0] 1707 54624 PetscFunctionListAdd_Private()
+[0] 47 1520 PetscGatherMessageLengths()
+[0] 43 1376 PetscGatherNumberOfMessages()
+[0] 2 528 PetscIntStackCreate()
+[0] 4 46476640 PetscLLCondensedCreate()
+[0] 291 13968 PetscLayoutCreate()
+[0] 235 3760 PetscLayoutSetUp()
+[0] 16 768 PetscLogView_Default()
+[0] 2 160096 PetscMatStashSpaceGet()
+[0] 84 6720 PetscObjectComposedDataIncreaseReal()
+[0] 29 8352 PetscObjectListAdd()
+[0] 14 288 PetscOptionsGetEList()
+[0] 1 16 PetscOptionsHelpPrintedCreate()
+[0] 2 992 PetscOptionsInsertFile()
+[0] 24 35536 PetscPostIrecvInt()
+[0] 24 35536 PetscPostIrecvScalar()
+[0] 1 32 PetscPushSignalHandler()
+[0] 10 14304 PetscSFBasicGetPack()
+[0] 14 11200 PetscSFCreate()
+[0] 2 128 PetscSFCreate_Basic()
+[0] 1 13344 PetscSFSetGraphLayout()
+[0] 8 13616 PetscSFSetUpRanks()
+[0] 8 7104 PetscSFSetUp_Basic()
+[0] 20 32544 PetscSegBufferCreate()
+[0] 4 64 PetscSegBufferExtractAlloc()
+[0] 2 1328 PetscStageLogCreate()
+[0] 1 2560 PetscStageLogRegister()
+[0] 2580 74672 PetscStrallocpy()
+[0] 2 17920 PetscTableAddExpand()
+[0] 60 463325792 PetscTableCreate()
+[0] 9 224256 PetscTableCreateCopy()
+[0] 50 1600 PetscTokenCreate()
+[0] 1 16 PetscViewerASCIIOpen()
+[0] 21 15456 PetscViewerCreate()
+[0] 8 768 PetscViewerCreate_ASCII()
+[0] 13 624 PetscViewerCreate_HDF5()
+[0] 12 192 PetscViewerHDF5PushGroup()
+[0] 4 64 VecAssemblyBegin_MPI()
+[0] 95 142880 VecCreate()
+[0] 92 464490656 VecCreate_MPI_Private()
+[0] 22 70080928 VecCreate_Seq()
+[0] 31 992 VecCreate_Seq_Private()
+[0] 1 48 VecDuplicateVecs_Default()
+[0] 30 159840 VecGetArray2d()
+[0] 20 136640 VecGetArray2dRead()
+[0] 3 1968 VecScatterCopy()
+[0] 27 247296 VecScatterCopy_PtoP_X()
+[0] 24 15712 VecScatterCreate()
+[0] 29 464 VecScatterCreateCommon_PtoS()
+[0] 229 53080288 VecScatterCreate_PtoS()
+[0] 128 2048 VecStashCreate_Private()
+[0] 200 412000 VecStashScatterBegin_Private()

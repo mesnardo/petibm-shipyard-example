@@ -1,0 +1,4 @@
+2018-06-15 15:29:42.472 INFO - Adding job job-snake to pool pool-snake
+2018-06-15 15:29:43.269 INFO - uploading file /tmp/tmpuqcyg2o1 as 'shipyardtaskrf-job-snake/task-00000.shipyard.envlist'
+2018-06-15 15:29:43.286 DEBUG - submitting 1 tasks (0 -> 0) to job job-snake
+2018-06-15 15:29:43.514 INFO - submitted all 1 tasks to job job-snake

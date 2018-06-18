@@ -1,0 +1,141 @@
+2018-06-18 10:30:34.175 INFO - creating container: shipyardgr-snakelab-pool-snake
+2018-06-18 10:30:34.528 INFO - creating container: shipyardrf-snakelab-pool-snake
+2018-06-18 10:30:34.548 INFO - creating container: shipyardtor-snakelab-pool-snake
+2018-06-18 10:30:34.570 INFO - creating container: shipyardremotefs
+2018-06-18 10:30:34.593 INFO - creating table: shipyarddht
+2018-06-18 10:30:34.840 INFO - creating table: shipyardtorrentinfo
+2018-06-18 10:30:34.852 INFO - creating table: shipyardimages
+2018-06-18 10:30:34.864 INFO - creating table: shipyardgr
+2018-06-18 10:30:34.876 INFO - deleting blobs: shipyardgr-snakelab-pool-snake
+2018-06-18 10:30:34.885 INFO - deleting blobs: shipyardrf-snakelab-pool-snake
+2018-06-18 10:30:34.896 INFO - deleting blobs: shipyardtor-snakelab-pool-snake
+2018-06-18 10:30:34.905 DEBUG - clearing table (pk=snakelab$pool-snake): shipyarddht
+2018-06-18 10:30:35.028 DEBUG - clearing table (pk=snakelab$pool-snake): shipyardtorrentinfo
+2018-06-18 10:30:35.101 DEBUG - clearing table (pk=snakelab$pool-snake): shipyardimages
+2018-06-18 10:30:35.111 DEBUG - clearing table (pk=snakelab$pool-snake): shipyardgr
+2018-06-18 10:30:35.139 DEBUG - clearing table (pk=snakelab$pool-snake): shipyardperf
+2018-06-18 10:30:35.150 INFO - adding global resource: docker:mesnardo/petibm:0.3.1-GPU-IntelMPI-ubuntu hash=cdc6cb8157ff48817cb6efa87f404c421a3d4601
+2018-06-18 10:30:35.335 DEBUG - autoscale enabled: False
+2018-06-18 10:30:35.335 DEBUG - no virtual network settings specified
+2018-06-18 10:30:36.527 INFO - deploying vm config: {'additional_properties': {}, 'publisher': 'OpenLogic', 'offer': 'CentOS-HPC', 'sku': '7.3', 'version': 'latest', 'virtual_machine_image_id': None}
+2018-06-18 10:30:36.540 INFO - uploading file /home/mesnardo/software/batch-shipyard/3.4.0/scripts/registry_login.sh as 'registry_login.sh'
+2018-06-18 10:30:36.567 INFO - uploading file /home/mesnardo/software/batch-shipyard/3.4.0/scripts/shipyard_blobxfer.sh as 'shipyard_blobxfer.sh'
+2018-06-18 10:30:36.621 INFO - uploading file /home/mesnardo/software/batch-shipyard/3.4.0/scripts/wait_for_images.sh as 'wait_for_images.sh'
+2018-06-18 10:30:36.653 INFO - uploading file /tmp/batch-shipyard-3.4.0-resources/azurefile-mount-snakelab-pool-snake.sh as 'azurefile-mount.sh'
+2018-06-18 10:30:36.697 INFO - uploading file /tmp/batch-shipyard-3.4.0-resources/nvidia-driver_cc37.run as 'nvidia-driver_cc37.run'
+2018-06-18 10:30:39.210 INFO - uploading file /home/mesnardo/software/batch-shipyard/3.4.0/scripts/shipyard_nodeprep.sh as 'shipyard_nodeprep.sh'
+2018-06-18 10:30:39.282 INFO - Attempting to create pool: pool-snake
+2018-06-18 10:30:40.528 INFO - Created pool: pool-snake
+2018-06-18 10:30:40.529 DEBUG - waiting for all nodes in pool pool-snake to reach one of: frozenset({<ComputeNodeState.start_task_failed: 'starttaskfailed'>, <ComputeNodeState.preempted: 'preempted'>, <ComputeNodeState.unusable: 'unusable'>, <ComputeNodeState.idle: 'idle'>})
+2018-06-18 10:31:02.943 DEBUG - waiting for 1 dedicated nodes and 0 low priority nodes of size standard_nc24r to reach desired state in pool pool-snake [resize_timeout=0:30:00 allocation_state=resizing allocation_state_transition_time=2018-06-18 14:30:40.312008+00:00]
+2018-06-18 10:31:23.275 DEBUG - waiting for 1 dedicated nodes and 0 low priority nodes of size standard_nc24r to reach desired state in pool pool-snake [resize_timeout=0:30:00 allocation_state=resizing allocation_state_transition_time=2018-06-18 14:30:40.312008+00:00]
+2018-06-18 10:31:45.681 DEBUG - waiting for 1 dedicated nodes and 0 low priority nodes of size standard_nc24r to reach desired state in pool pool-snake [resize_timeout=0:30:00 allocation_state=resizing allocation_state_transition_time=2018-06-18 14:30:40.312008+00:00]
+2018-06-18 10:32:06.681 DEBUG - waiting for 1 dedicated nodes and 0 low priority nodes of size standard_nc24r to reach desired state in pool pool-snake [resize_timeout=0:30:00 allocation_state=resizing allocation_state_transition_time=2018-06-18 14:30:40.312008+00:00]
+2018-06-18 10:32:29.260 DEBUG - waiting for 1 dedicated nodes and 0 low priority nodes of size standard_nc24r to reach desired state in pool pool-snake [resize_timeout=0:30:00 allocation_state=steady allocation_state_transition_time=2018-06-18 14:32:26.478757+00:00]
+2018-06-18 10:32:29.260 DEBUG - tvm-587366007_1-20180618t143224z: starting
+2018-06-18 10:32:51.838 DEBUG - waiting for 1 dedicated nodes and 0 low priority nodes of size standard_nc24r to reach desired state in pool pool-snake [resize_timeout=0:30:00 allocation_state=steady allocation_state_transition_time=2018-06-18 14:32:26.478757+00:00]
+2018-06-18 10:32:51.838 DEBUG - tvm-587366007_1-20180618t143224z: starting
+2018-06-18 10:33:14.436 DEBUG - waiting for 1 dedicated nodes and 0 low priority nodes of size standard_nc24r to reach desired state in pool pool-snake [resize_timeout=0:30:00 allocation_state=steady allocation_state_transition_time=2018-06-18 14:32:26.478757+00:00]
+2018-06-18 10:33:14.436 DEBUG - tvm-587366007_1-20180618t143224z: starting
+2018-06-18 10:33:34.497 DEBUG - waiting for 1 dedicated nodes and 0 low priority nodes of size standard_nc24r to reach desired state in pool pool-snake [resize_timeout=0:30:00 allocation_state=steady allocation_state_transition_time=2018-06-18 14:32:26.478757+00:00]
+2018-06-18 10:33:34.497 DEBUG - tvm-587366007_1-20180618t143224z: starting
+2018-06-18 10:33:57.265 DEBUG - waiting for 1 dedicated nodes and 0 low priority nodes of size standard_nc24r to reach desired state in pool pool-snake [resize_timeout=0:30:00 allocation_state=steady allocation_state_transition_time=2018-06-18 14:32:26.478757+00:00]
+2018-06-18 10:33:57.265 DEBUG - tvm-587366007_1-20180618t143224z: starting
+2018-06-18 10:34:17.423 DEBUG - waiting for 1 dedicated nodes and 0 low priority nodes of size standard_nc24r to reach desired state in pool pool-snake [resize_timeout=0:30:00 allocation_state=steady allocation_state_transition_time=2018-06-18 14:32:26.478757+00:00]
+2018-06-18 10:34:17.423 DEBUG - tvm-587366007_1-20180618t143224z: starting
+2018-06-18 10:34:40.853 DEBUG - waiting for 1 dedicated nodes and 0 low priority nodes of size standard_nc24r to reach desired state in pool pool-snake [resize_timeout=0:30:00 allocation_state=steady allocation_state_transition_time=2018-06-18 14:32:26.478757+00:00]
+2018-06-18 10:34:40.854 DEBUG - tvm-587366007_1-20180618t143224z: waitingforstarttask
+2018-06-18 10:35:03.947 DEBUG - waiting for 1 dedicated nodes and 0 low priority nodes of size standard_nc24r to reach desired state in pool pool-snake [resize_timeout=0:30:00 allocation_state=steady allocation_state_transition_time=2018-06-18 14:32:26.478757+00:00]
+2018-06-18 10:35:03.947 DEBUG - tvm-587366007_1-20180618t143224z: waitingforstarttask
+2018-06-18 10:35:27.032 DEBUG - waiting for 1 dedicated nodes and 0 low priority nodes of size standard_nc24r to reach desired state in pool pool-snake [resize_timeout=0:30:00 allocation_state=steady allocation_state_transition_time=2018-06-18 14:32:26.478757+00:00]
+2018-06-18 10:35:27.032 DEBUG - tvm-587366007_1-20180618t143224z: waitingforstarttask
+2018-06-18 10:35:49.961 DEBUG - waiting for 1 dedicated nodes and 0 low priority nodes of size standard_nc24r to reach desired state in pool pool-snake [resize_timeout=0:30:00 allocation_state=steady allocation_state_transition_time=2018-06-18 14:32:26.478757+00:00]
+2018-06-18 10:35:49.961 DEBUG - tvm-587366007_1-20180618t143224z: waitingforstarttask
+2018-06-18 10:36:13.093 DEBUG - waiting for 1 dedicated nodes and 0 low priority nodes of size standard_nc24r to reach desired state in pool pool-snake [resize_timeout=0:30:00 allocation_state=steady allocation_state_transition_time=2018-06-18 14:32:26.478757+00:00]
+2018-06-18 10:36:13.093 DEBUG - tvm-587366007_1-20180618t143224z: waitingforstarttask
+2018-06-18 10:36:35.950 DEBUG - waiting for 1 dedicated nodes and 0 low priority nodes of size standard_nc24r to reach desired state in pool pool-snake [resize_timeout=0:30:00 allocation_state=steady allocation_state_transition_time=2018-06-18 14:32:26.478757+00:00]
+2018-06-18 10:36:35.950 DEBUG - tvm-587366007_1-20180618t143224z: waitingforstarttask
+2018-06-18 10:36:58.707 DEBUG - waiting for 1 dedicated nodes and 0 low priority nodes of size standard_nc24r to reach desired state in pool pool-snake [resize_timeout=0:30:00 allocation_state=steady allocation_state_transition_time=2018-06-18 14:32:26.478757+00:00]
+2018-06-18 10:36:58.707 DEBUG - tvm-587366007_1-20180618t143224z: waitingforstarttask
+2018-06-18 10:37:21.629 DEBUG - waiting for 1 dedicated nodes and 0 low priority nodes of size standard_nc24r to reach desired state in pool pool-snake [resize_timeout=0:30:00 allocation_state=steady allocation_state_transition_time=2018-06-18 14:32:26.478757+00:00]
+2018-06-18 10:37:21.629 DEBUG - tvm-587366007_1-20180618t143224z: waitingforstarttask
+2018-06-18 10:37:44.125 DEBUG - waiting for 1 dedicated nodes and 0 low priority nodes of size standard_nc24r to reach desired state in pool pool-snake [resize_timeout=0:30:00 allocation_state=steady allocation_state_transition_time=2018-06-18 14:32:26.478757+00:00]
+2018-06-18 10:37:44.126 DEBUG - tvm-587366007_1-20180618t143224z: waitingforstarttask
+2018-06-18 10:38:06.765 DEBUG - waiting for 1 dedicated nodes and 0 low priority nodes of size standard_nc24r to reach desired state in pool pool-snake [resize_timeout=0:30:00 allocation_state=steady allocation_state_transition_time=2018-06-18 14:32:26.478757+00:00]
+2018-06-18 10:38:06.765 DEBUG - tvm-587366007_1-20180618t143224z: waitingforstarttask
+2018-06-18 10:38:26.796 DEBUG - waiting for 1 dedicated nodes and 0 low priority nodes of size standard_nc24r to reach desired state in pool pool-snake [resize_timeout=0:30:00 allocation_state=steady allocation_state_transition_time=2018-06-18 14:32:26.478757+00:00]
+2018-06-18 10:38:26.796 DEBUG - tvm-587366007_1-20180618t143224z: waitingforstarttask
+2018-06-18 10:38:47.013 DEBUG - waiting for 1 dedicated nodes and 0 low priority nodes of size standard_nc24r to reach desired state in pool pool-snake [resize_timeout=0:30:00 allocation_state=steady allocation_state_transition_time=2018-06-18 14:32:26.478757+00:00]
+2018-06-18 10:38:47.013 DEBUG - tvm-587366007_1-20180618t143224z: waitingforstarttask
+2018-06-18 10:39:09.949 DEBUG - waiting for 1 dedicated nodes and 0 low priority nodes of size standard_nc24r to reach desired state in pool pool-snake [resize_timeout=0:30:00 allocation_state=steady allocation_state_transition_time=2018-06-18 14:32:26.478757+00:00]
+2018-06-18 10:39:09.949 DEBUG - tvm-587366007_1-20180618t143224z: waitingforstarttask
+2018-06-18 10:39:32.980 DEBUG - waiting for 1 dedicated nodes and 0 low priority nodes of size standard_nc24r to reach desired state in pool pool-snake [resize_timeout=0:30:00 allocation_state=steady allocation_state_transition_time=2018-06-18 14:32:26.478757+00:00]
+2018-06-18 10:39:32.981 DEBUG - tvm-587366007_1-20180618t143224z: waitingforstarttask
+2018-06-18 10:39:40.149 INFO - statistics summary for pool pool-snake
+* Batch Shipyard version: 3.4.0
+* Total nodes: 1
+  * Dedicated nodes: 1 (100.0% of target)
+  * Low Priority nodes: 0 (100.0% of target)
+* Node states:
+  * creating: 0
+  * idle: 1
+  * leaving_pool: 0
+  * offline: 0
+  * preempted: 0
+  * rebooting: 0
+  * reimaging: 0
+  * running: 0
+  * start_task_failed: 0
+  * starting: 0
+  * unknown: 0
+  * unusable: 0
+  * waiting_for_start_task: 0
+* Node uptime:
+  * Mean: 0:05:13.303740
+  * Min: 0:05:13.303740
+  * Max: 0:05:13.303740
+* Time taken for node creation to ready:
+  * Mean: 0:07:13.937758
+  * Min: 0:07:13.937758
+  * Max: 0:07:13.937758
+* Time taken for last boot startup (includes prep):
+  * Mean: 0:05:11.736545
+  * Min: 0:05:11.736545
+  * Max: 0:05:11.736545
+* Running tasks:
+  * Sum: 0
+  * Mean: 0.0
+  * Min: 0
+  * Max: 0
+* Total tasks run:
+  * Sum: 0
+  * Mean: 0.0
+  * Min: 0
+  * Max: 0
+* Task scheduling slots:
+  * Busy: 0 (0.00% of runnable)
+  * Available: 1 (100.00% of runnable)
+  * Runnable: 1 (100.00% of total)
+  * Total: 1
+2018-06-18 10:39:40.415 DEBUG - skipping rdp config for linux pool pool-snake
+2018-06-18 10:39:40.415 INFO - generating ssh key pair to path: .
+Generating public/private rsa key pair.
+Your identification has been saved in id_rsa_shipyard.
+Your public key has been saved in id_rsa_shipyard.pub.
+The key fingerprint is:
+SHA256:E1hofT74rzQOTkfE1RO+tgSSBTBi0kAIGk/OQt9mErI mesnardo@phantom
+The key's randomart image is:
++---[RSA 2048]----+
+|o+.++ooo+...o... |
+|o*= oo++.o.+ .o  |
+|oE+o =. .+= . .. |
+| .  +   .oo. . . |
+|        S...  +  |
+|         o.  o . |
+|        o +.  .  |
+|       o = ..    |
+|        . o.     |
++----[SHA256]-----+
+2018-06-18 10:39:40.546 INFO - adding user shipyard to node tvm-587366007_1-20180618t143224z in pool pool-snake, expiry=2018-07-18 14:39:40.546086
+Datetime with no tzinfo will be considered UTC.
+2018-06-18 10:39:42.701 INFO - node tvm-587366007_1-20180618t143224z: ip 40.117.249.222 port 50000
