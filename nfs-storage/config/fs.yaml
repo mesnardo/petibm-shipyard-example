@@ -1,0 +1,42 @@
+remote_fs:
+  resource_group: snakebatchrg
+  location: eastus
+  managed_disks:
+    premium: false
+    disk_size_gb: 31
+    disk_names:
+    - p4-disk0a
+    - p4-disk1a
+  storage_clusters:
+    mystoragecluster:
+      hostname_prefix: snakestoragecluster
+      ssh:
+        username: shipyard
+      file_server:
+        type: nfs
+        mountpoint: /data
+        mount_options:
+        - noatime
+        - nodiratime
+      network_security:
+        ssh:
+        - '*'
+      virtual_network:
+        name: myvnet
+        address_space: 10.0.0.0/16
+        existing_ok: true
+        subnet:
+          name: my-server-subnet
+          address_prefix: 10.0.0.0/24
+      public_ip:
+        enabled: true
+        static: false
+      vm_count: 1
+      vm_size: STANDARD_F1
+      vm_disk_map:
+        '0':
+          disk_array:
+          - p4-disk0a
+          - p4-disk1a
+          filesystem: btrfs
+          raid_level: 0

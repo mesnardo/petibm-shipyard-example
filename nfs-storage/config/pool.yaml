@@ -1,0 +1,23 @@
+pool_specification:
+  id: pool-snake
+  vm_configuration:
+    platform_image:
+      publisher: OpenLogic
+      offer: CentOS-HPC
+      sku: '7.3'
+  vm_size: STANDARD_NC24R
+  vm_count:
+    dedicated: 2
+    low_priority: 0
+  max_tasks_per_node: 1
+  resize_timeout: 00:30:00
+  inter_node_communication_enabled: true
+  ssh:
+    username: shipyard
+  virtual_network:
+    name: myvnet
+    resource_group: snakebatchrg
+    address_space: 10.0.0.0/16
+    subnet:
+      name: my-nodes-subnet
+      address_prefix: 10.0.1.0/24
