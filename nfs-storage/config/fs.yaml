@@ -1,5 +1,5 @@
 remote_fs:
-  resource_group: snakebatchrg
+  resource_group: snake-rg
   location: eastus
   managed_disks:
     premium: false
