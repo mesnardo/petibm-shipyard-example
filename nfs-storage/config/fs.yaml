@@ -1,6 +1,6 @@
 remote_fs:
-  resource_group: snake-rg
-  location: eastus
+  resource_group: <resource-group>
+  location: <location>
   managed_disks:
     premium: false
     disk_size_gb: 31
