@@ -15,4 +15,6 @@ global_resources:
       path: snake
     destination:
       shared_data_volume: mystoragecluster
-      relative_destination_path: data
+      relative_destination_path: $AZ_BATCH_NODE_SHARED_DIR/mystoragecluster/snake
+      data_transfer:
+        method: rsync+ssh
