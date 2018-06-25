@@ -1,0 +1,5 @@
+# Ignore downloaded output data
+output
+
+# Ignore configuration files with my credentials
+config.mesnardo
