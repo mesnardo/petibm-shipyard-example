@@ -12,6 +12,19 @@ remote_fs:
       hostname_prefix: snakestoragecluster
       ssh:
         username: shipyard
+      public_ip:
+        enabled: true
+        static: false
+      virtual_network:
+        name: myvnet
+        address_space: 10.0.0.0/16
+        existing_ok: true
+        subnet:
+          name: my-server-subnet
+          address_prefix: 10.0.0.0/24
+      network_security:
+        ssh:
+        - '*'
       file_server:
         type: nfs
         mountpoint: /data
@@ -25,19 +38,6 @@ remote_fs:
             - sync
             - no_root_squash
             - no_subtree_check
-      network_security:
-        ssh:
-        - '*'
-      virtual_network:
-        name: myvnet
-        address_space: 10.0.0.0/16
-        existing_ok: true
-        subnet:
-          name: my-server-subnet
-          address_prefix: 10.0.0.0/24
-      public_ip:
-        enabled: true
-        static: false
       vm_count: 1
       vm_size: STANDARD_F1
       accelerated_networking: false

@@ -10,11 +10,3 @@ global_resources:
         container_path: $AZ_BATCH_NODE_SHARED_DIR/mystoragecluster
         mount_options: []
         bind_options: rw
-  files:
-  - source:
-      path: snake
-    destination:
-      shared_data_volume: mystoragecluster
-      relative_destination_path: $AZ_BATCH_NODE_SHARED_DIR/mystoragecluster/snake
-      data_transfer:
-        method: rsync+ssh
