@@ -1,6 +1,6 @@
 remote_fs:
-  resource_group: snake-rg
-  location: eastus
+  resource_group: <resource-group>
+  location: <location>
   managed_disks:
     premium: false
     disk_size_gb: 31
@@ -23,7 +23,7 @@ remote_fs:
             '*':
             - rw
             - sync
-            - root_squash
+            - no_root_squash
             - no_subtree_check
       network_security:
         ssh:
@@ -40,6 +40,7 @@ remote_fs:
         static: false
       vm_count: 1
       vm_size: STANDARD_F1
+      accelerated_networking: false
       vm_disk_map:
         '0':
           disk_array:
