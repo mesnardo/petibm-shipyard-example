@@ -18,6 +18,13 @@ remote_fs:
         mount_options:
         - noatime
         - nodiratime
+        server_options:
+          nfs:
+            '*':
+            - rw
+            - sync
+            - root_squash
+            - no_subtree_check
       network_security:
         ssh:
         - '*'

@@ -4,8 +4,6 @@ job_specifications:
   max_task_retries: 1
   retention_time: 2.00:00:00
   priority: 0
-  user_identity:
-    default_pool_admin: true
   allow_run_on_missing_image: false
   remove_container_after_exit: true
   shm_size: 256m
