@@ -1,7 +1,5 @@
-# Ignore configuration files containing my credentials
-config-mesnardo
-config-1node
+# Ignore downloaded output data
+output
 
-# Ignore downloaded output files
-snake-output
-snake-output-1node
+# Ignore configuration files with my credentials
+config.mesnardo

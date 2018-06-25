@@ -10,7 +10,7 @@ job_specifications:
   infiniband: true
   gpu: true
   shared_data_volumes:
-  - azurefilevol
+  - mystoragecluster
   tasks:
   - id: null
     docker_image: mesnardo/petibm:0.3.1-GPU-IntelMPI-ubuntu
@@ -18,4 +18,4 @@ job_specifications:
     multi_instance:
       num_instances: pool_current_dedicated
     entrypoint: null
-    command: /mnt/fileshare/snake/run-petibm.sh /mnt/fileshare/snake
+    command: $AZ_BATCH_NODE_SHARED_DIR/mystoragecluster/snake/run-petibm.sh

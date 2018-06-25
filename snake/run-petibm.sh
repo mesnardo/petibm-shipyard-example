@@ -1,6 +1,7 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
-SIMULATION_DIR=$1
+scriptdir="$( cd "$(dirname "$0")" ; pwd -P )"
+SIMULATION_DIR=$scriptdir
 
 source /opt/intel/compilers_and_libraries/linux/mpi/intel64/bin/mpivars.sh
 
