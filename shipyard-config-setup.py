@@ -7,6 +7,7 @@ import os
 import argparse
 import subprocess
 import ast
+import glob
 
 
 def parse_command_line():
@@ -86,9 +87,7 @@ def get_batch_account_endpoint(resource_group):
 
 def get_config_paths(config_dir):
   if os.path.isdir(config_dir):
-    filenames = ['config.yaml', 'credentials.yaml', 'fs.yaml',
-                 'pool.yaml', 'jobs.yaml']
-    return [os.path.join(config_dir, name) for name in filenames]
+    return glob.glob(os.path.join(config_dir, '*.yaml'))
 
 
 def replace_strings_in_files(filepaths, info):
