@@ -5,6 +5,7 @@ pool_specification:
       publisher: OpenLogic
       offer: CentOS-HPC
       sku: '7.3'
+      native: true
   vm_size: STANDARD_NC24R
   vm_count:
     dedicated: 2

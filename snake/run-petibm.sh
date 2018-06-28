@@ -11,7 +11,7 @@ nodes=${#HOSTS[@]}
 echo "Number of nodes: $nodes"
 echo "Hosts: $AZ_BATCH_HOST_LIST"
 # number of processes per node
-ppn=2
+ppn=12
 echo "Number of processes per node to use: $ppn"
 # number of processes
 np=$(($nodes * $ppn))
@@ -29,11 +29,14 @@ echo "Number of GPU devices per node to use: $ngpus ($CUDA_VISIBLE_DEVICES)"
 echo "PATH: $PATH"
 echo "LD_LIBRARY_PATH: $LD_LIBRARY_PATH"
 
+cp $AZ_BATCH_TASK_DIR/stdout.txt $SIMULATION_DIR
+cp $AZ_BATCH_TASK_DIR/stderr.txt $SIMULATION_DIR
+
 mpirun -np $np -ppn $ppn -host $AZ_BATCH_HOST_LIST \
   -genv CUDA_VISIBLE_DEVICES=$CUDA_VISIBLE_DEVICES \
   petibm-decoupledibpm \
   -directory $SIMULATION_DIR \
-  -log_view ascii:$SIMULATION_DIR/log.out \
+  -log_view ascii:$SIMULATION_DIR/view.log \
   -malloc_log \
   -memory_view \
-  -options_left
+  -options_left >> $SIMULATION_DIR/stdout.txt 2> $SIMULATION_DIR/stderr.txt
