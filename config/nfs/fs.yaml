@@ -2,11 +2,11 @@ remote_fs:
   resource_group: <resource-group>
   location: <location>
   managed_disks:
-    premium: false
-    disk_size_gb: 31
+    premium: true
+    disk_size_gb: 63
     disk_names:
-    - p4-disk0a
-    - p4-disk1a
+    - p6-disk0a
+    - p6-disk1a
   storage_clusters:
     mystoragecluster:
       hostname_prefix: snakestoragecluster
@@ -35,16 +35,16 @@ remote_fs:
           nfs:
             '*':
             - rw
-            - sync
+            - async
             - no_root_squash
             - no_subtree_check
       vm_count: 1
-      vm_size: STANDARD_F1
-      accelerated_networking: false
+      vm_size: STANDARD_F2S
+      accelerated_networking: true
       vm_disk_map:
         '0':
           disk_array:
-          - p4-disk0a
-          - p4-disk1a
+          - p6-disk0a
+          - p6-disk1a
           filesystem: btrfs
           raid_level: 0

@@ -44,9 +44,9 @@ flow:
 parameters:
   dt: 0.0004
   startStep: 0
-  nt: 10
-  nsave: 5
-  nrestart: 10
+  nt: 100
+  nsave: 20
+  nrestart: 20
   convection: ADAMS_BASHFORTH_2
   diffusion: CRANK_NICOLSON
   velocitySolver:
