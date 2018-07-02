@@ -2,6 +2,7 @@ job_specifications:
 - id: job-snake
   auto_complete: true
   max_task_retries: 1
+  max_wall_time: 0.00:30:00
   retention_time: 2.00:00:00
   priority: 0
   allow_run_on_missing_image: false
@@ -16,6 +17,12 @@ job_specifications:
     docker_image: mesnardo/petibm:0.3.1-GPU-IntelMPI-ubuntu
     max_wall_time: 0.00:30:00
     multi_instance:
-      num_instances: pool_current_dedicated
+      num_instances: pool_specification_vm_count_dedicated
     entrypoint: null
     command: $AZ_BATCH_NODE_SHARED_DIR/gfs/snake/run-petibm.sh
+    output_data:
+      azure_storage:
+      - storage_account_settings: mystorageaccount
+        remote_path: myfileshare/snake2d/snake-output
+        local_path: $AZ_BATCH_NODE_SHARED_DIR/gfs/snake
+        is_file_share: true

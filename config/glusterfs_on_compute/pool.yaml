@@ -2,9 +2,9 @@ pool_specification:
   id: pool-snake
   vm_configuration:
     platform_image:
-      publisher: microsoft-azure-batch
-      offer: ubuntu-server-container-rdma
-      sku: '16-04-lts'
+      publisher: OpenLogic
+      offer: CentOS-HPC
+      sku: '7.3'
       native: true
   vm_size: STANDARD_NC24R
   vm_count:

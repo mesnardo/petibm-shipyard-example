@@ -10,3 +10,11 @@ global_resources:
         container_path: $AZ_BATCH_NODE_SHARED_DIR/gfs
         mount_options: []
         bind_options: rw
+  files:
+  - source:
+      path: snake
+    destination:
+      shared_data_volume: glustervol
+      relative_destination_path: snake
+      data_transfer:
+        method: rsync+ssh
